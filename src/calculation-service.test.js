@@ -16,9 +16,7 @@ describe('Calculation service', () => {
   describe('mocking resolved value', () => {
     it('should resolve mocked value', async () => {
       const value = 2;
-      mock.method(calculationService, 'calculate', async () =>
-        Promise.resolve(value)
-      );
+      mock.method(calculationService, 'calculate', async () => value);
 
       const result = await calculationService.calculate();
 
@@ -27,9 +25,7 @@ describe('Calculation service', () => {
 
     it('should resolve value by mocked implementation', async () => {
       const value = 2;
-      mock.method(calculationService, 'calculate', async (a) =>
-        Promise.resolve(a)
-      );
+      mock.method(calculationService, 'calculate', async (a) => a);
 
       const result = await calculationService.calculate(value);
 
@@ -75,9 +71,7 @@ describe('Calculation service', () => {
     it('should return value from chained methods', async () => {
       const value = 10;
       mock.method(calculationService, 'get', () => calculationService);
-      mock.method(calculationService, 'calculate', async () =>
-        Promise.resolve(value)
-      );
+      mock.method(calculationService, 'calculate', async () => value);
 
       const result = await calculationService.get().calculate();
 
