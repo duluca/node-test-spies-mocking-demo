@@ -2,7 +2,7 @@ const get = () => 2;
 
 const calculate = async () => 5;
 
-module.exports = {
+export default {
   get,
   calculate,
 };

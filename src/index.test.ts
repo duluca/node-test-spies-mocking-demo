@@ -1,8 +1,8 @@
-const assert = require('node:assert/strict');
-const { describe, it, mock } = require('node:test');
+import assert from 'node:assert/strict';
+import { describe, it, mock } from 'node:test';
 
-const axios = require('axios');
-const fs = require('fs/promises');
+import axios from 'axios';
+import fs from 'fs/promises';
 
 describe('Mocking modules', () => {
   mock.method(fs, 'readFile', async () => 'test');

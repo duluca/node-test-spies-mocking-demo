@@ -4,6 +4,11 @@
 
 ### Setup
 
+- Use Node version >= 20
+
+- Run tests with the following commands
+
 ```bash
 npm test
+npm run test:ts # TypeScript tests
 ```

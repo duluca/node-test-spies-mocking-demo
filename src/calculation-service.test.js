@@ -1,7 +1,6 @@
-const assert = require('node:assert/strict');
-const { describe, it, mock } = require('node:test');
-
-const calculationService = require('./calculation-service');
+import assert from 'node:assert/strict';
+import { describe, it, mock } from 'node:test';
+import calculationService from './calculation-service.js';
 
 const calculateSomething = async (calculationService, a, b) =>
   calculationService.calculate(a, b);
